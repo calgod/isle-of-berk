@@ -347,20 +347,22 @@ body {
     top: 50%;
     transform: translateY(-50%) translateX(30px) scale(0.5);
 }
+
 .value-speed:hover .value-gif,
 .value-speed:focus .value-gif {
     transform: translateY(-50%) translateX(0) scale(1);
 }
 
-/* Power - erupts upward with force */
-.value-power .value-gif {
+/* Strength - erupts upward with force */
+.value-strength .value-gif {
     width: 100px;
     left: 50%;
     bottom: 100%;
     transform: translateX(-50%) translateY(20px) scale(0.8);
 }
-.value-power:hover .value-gif,
-.value-power:focus .value-gif {
+
+.value-strength:hover .value-gif,
+.value-strength:focus .value-gif {
     transform: translateX(-50%) translateY(-10px) scale(1.1);
 }
 
