@@ -278,11 +278,114 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    padding: 0.3rem 0.6rem;
+    border-bottom: 2px dashed transparent;
+    text-shadow: 0 0 0 transparent;
+}
+
+.values-list li:hover,
+.values-list li:focus {
+    color: var(--color-muted-gold);
+    outline: none;
+    text-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
+    border-bottom-color: var(--color-muted-gold);
+}
+
+/* Subtle pulsing hint that items are interactive */
+.values-list li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-muted-gold);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.values-list li:hover::after,
+.values-list li:focus::after {
+    width: 100%;
+    left: 0;
 }
 
 .values-list li::before {
     content: '⦿';
     color: var(--color-muted-gold);
+    transition: transform 0.3s ease;
+    opacity: 0.6;
+}
+
+.values-list li:hover::before,
+.values-list li:focus::before {
+    opacity: 1;
+    transform: rotate(180deg) scale(1.2);
+}
+
+/* Value GIF overlays - each positioned uniquely */
+.value-gif {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.values-list li:hover .value-gif,
+.values-list li:focus .value-gif {
+    opacity: 1;
+}
+
+/* Speed - zooms in from the right like it's racing past */
+.value-speed .value-gif {
+    width: 120px;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%) translateX(30px) scale(0.5);
+}
+.value-speed:hover .value-gif,
+.value-speed:focus .value-gif {
+    transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* Power - erupts upward with force */
+.value-power .value-gif {
+    width: 100px;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(20px) scale(0.8);
+}
+.value-power:hover .value-gif,
+.value-power:focus .value-gif {
+    transform: translateX(-50%) translateY(-10px) scale(1.1);
+}
+
+/* Dragons - swoops down from above like a diving dragon */
+.value-dragons .value-gif {
+    width: 140px;
+    left: 50%;
+    top: -120px;
+    transform: translateX(-50%) translateY(-30px) rotate(-10deg);
+}
+.value-dragons:hover .value-gif,
+.value-dragons:focus .value-gif {
+    transform: translateX(-50%) translateY(0) rotate(5deg);
+}
+
+/* Beards - hangs right under the word like it's wearing it */
+.value-beards .value-gif {
+    width: 70px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%) translateY(-10px) scale(0.8);
+}
+.value-beards:hover .value-gif,
+.value-beards:focus .value-gif {
+    transform: translateX(-50%) translateY(5px) scale(1);
 }
 
 /* === FOOTER BANNER === */
