@@ -373,6 +373,7 @@ body {
     top: -120px;
     transform: translateX(-50%) translateY(-30px) rotate(-10deg);
 }
+
 .value-dragons:hover .value-gif,
 .value-dragons:focus .value-gif {
     transform: translateX(-50%) translateY(0) rotate(5deg);
@@ -385,6 +386,7 @@ body {
     top: 100%;
     transform: translateX(-50%) translateY(-10px) scale(0.8);
 }
+
 .value-beards:hover .value-gif,
 .value-beards:focus .value-gif {
     transform: translateX(-50%) translateY(5px) scale(1);
@@ -452,6 +454,136 @@ body {
     letter-spacing: 3px;
     color: var(--color-frost);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* === TEAM GRID === */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.team-member {
+    aspect-ratio: 1;
+    overflow: visible;
+    border: 2px solid var(--color-muted-gold);
+    border-radius: 50%;
+    position: relative;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: sepia(20%) contrast(1.1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.team-member::after {
+    content: '';
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    transform: translateX(-42%) translateY(0);
+    width: 90%;
+    height: 70%;
+    background: url('assets/helmet.webp') no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.team-member .beard {
+    position: absolute;
+    bottom: -42%;
+    transform: translateX(-50%) translateY(0);
+    width: 42%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+}
+
+/* Randomize beard colors - natural tones */
+.team-member:nth-child(1) .beard {
+    filter: sepia(60%) saturate(80%) brightness(0.4) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* dark brown */
+.team-member:nth-child(2) .beard {
+    filter: grayscale(100%) brightness(0.3) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* black */
+.team-member:nth-child(3) .beard {
+    filter: sepia(80%) saturate(120%) hue-rotate(-10deg) brightness(0.6) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* ginger */
+.team-member:nth-child(4) .beard {
+    filter: grayscale(100%) brightness(0.6) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* grey */
+.team-member:nth-child(5) .beard {
+    filter: sepia(50%) saturate(60%) brightness(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* blonde */
+.team-member:nth-child(6) .beard {
+    filter: sepia(70%) saturate(90%) brightness(0.5) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* brown */
+.team-member:nth-child(7) .beard {
+    filter: grayscale(100%) brightness(1.3) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* white */
+.team-member:nth-child(8) .beard {
+    filter: sepia(90%) saturate(150%) hue-rotate(-5deg) brightness(0.55) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* auburn */
+.team-member:nth-child(9) .beard {
+    filter: grayscale(100%) brightness(0.25) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* black */
+.team-member:nth-child(10) .beard {
+    filter: sepia(40%) saturate(50%) brightness(1.2) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* light blonde */
+.team-member:nth-child(11) .beard {
+    filter: grayscale(100%) brightness(0.5) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* dark grey */
+.team-member:nth-child(12) .beard {
+    filter: sepia(100%) saturate(200%) hue-rotate(-15deg) brightness(0.5) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* red */
+
+.team-member:hover img {
+    filter: sepia(100%) contrast(1);
+    transform: scale(1.02);
+}
+
+.team-member:hover::after {
+    transform: translateX(-42%) translateY(-15px);
+}
+
+.team-member:hover .beard {
+    transform: translateX(-50%) translateY(15px);
 }
 
 /* === RESPONSIVE ADJUSTMENTS === */
