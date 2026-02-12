@@ -259,6 +259,42 @@ body {
     color: var(--color-parchment);
 }
 
+/* === OLYMPIC NOTICE === */
+.olympic-notice {
+    margin: 1.5rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.notice-box {
+    background: var(--color-dark-wood);
+    border: 3px solid var(--color-bright-gold);
+    padding: 1.5rem 2rem;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+    text-align: center;
+}
+
+.olympic-rings {
+    max-width: 120px;
+    height: auto;
+    margin: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notice-text {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    line-height: 1.8;
+    color: var(--color-parchment);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
 /* === VIKING VALUES LIST === */
 .values-list {
     list-style: none;
