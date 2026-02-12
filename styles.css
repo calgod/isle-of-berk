@@ -11,6 +11,25 @@
     --color-dark-wood: #3e2723;
 }
 
+/* === ADVERTISEMENT MARQUEE === */
+.advertisement-marquee {
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-deep-red), var(--color-blood-red), var(--color-deep-red));
+    border-bottom: 3px solid var(--color-bright-gold);
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-text {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-parchment);
+    letter-spacing: 1px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
 /* === RESET & BASE STYLES === */
 * {
     margin: 0;
