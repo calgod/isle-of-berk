@@ -1,6 +1,4 @@
-> Note from the editor:
-> 
-> The creation of project was assisted by Claude Opus 4.5 (and some Sonnet 4.5) with GitHub Copilot in VS Code.
+> Note from the editor: The creation of this project was assisted by Claude Opus 4.5 (and some Sonnet 4.5) with GitHub Copilot in VS Code.
 
 # Isle of Berk
 
