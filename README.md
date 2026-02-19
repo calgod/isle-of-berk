@@ -1,24 +1,24 @@
+> Note from the editor:
+> 
+> The creation of project was assisted by Claude Opus 4.5 (and some Sonnet 4.5) with GitHub Copilot in VS Code.
+
 # Isle of Berk
 
-A simple Viking-themed propaganda poster for the RoviSys Winter Olympics 2026. Just HTML and CSS, no frameworks or JavaScript.
+An interactive Viking/How To Train Your Dragon themed propaganda poster for the RoviSys Winter Olympics 2026. Just plain HTML and CSS!
 
-The design is inspired by How to Train Your Dragon and Norse Viking aesthetics. Beards, bold colors, and propaganda poster vibes.
+<b> Beards, strength, speed, dragons . . . </b>
 
+[Check it out!](https://www.isleofberk.org)
+> If that link breaks because I forget to renew the domain, try [this one](https://isleofberk.pages.dev)
 ## Running Locally
 
-Easiest way is to use Python's built-in HTTP server:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000` in your browser. You can also just open `index.html` directly if you prefer.
+Clone the repo and open `index.html` in your browser. No weird deprecated dependency installs here.
 
 ## Project Structure
 
 - `index.html` - The main page
 - `styles.css` - All styles and animations
-- `assets/` - Images and favicons
+- `assets/` - Images, gifs, favicons
 
 ## Customizing Colors
 
